@@ -1,0 +1,54 @@
+.AddNote__form {
+	padding: 2rem;
+	width: 75vw;
+  }
+
+  .AddNote__form-title {
+	font-size: 44px;
+	font-weight: 600;
+	padding-bottom: 0.7rem;
+	border-bottom: 2px solid var(--color-gray);
+  }
+  
+  .AddNote__form input {
+	border: 0px;
+	outline: none;
+	background-color: transparent;
+  }
+  
+  .AddNote__form-title input {
+	font-size: 44px;
+	width: 100%;
+	font-family: "poppins";
+  }
+  
+  .AddNote__form-body {
+	padding-top: 2rem;
+  }
+  
+  .AddNote__form-body input {
+	font-size: 1rem;
+	width: 100%;
+	max-width: 80vw;
+  }
+  
+  .AddNote__form-body textarea {
+	font-size: 1rem;
+	width: 100%;
+	max-width: 80vw;
+	font-family: "poppins";
+	resize: none;
+  }
+  
+  textarea::-webkit-scrollbar {
+	width: 0px;
+  }
+  
+  .AddNote__form-btn {
+	margin-top: 1rem;
+	background-color: var(--color-accent);
+	color: var(--color-white);
+	padding: 1rem 2rem;
+	cursor: pointer;
+  }
+  
