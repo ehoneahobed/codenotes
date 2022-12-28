@@ -3,9 +3,11 @@ const app = express();
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const noteRoute = require("./routes/notes");
+const cors = require("cors");
 
 dotenv.config();
 
+// connecting to database
 mongoose.set('strictQuery', true);
 mongoose
 	.connect(process.env.DB_URL, {
@@ -14,7 +16,9 @@ mongoose
 	})
 	.then(console.log("connected to database successfully"))
 	.catch((error) => console.log(error));
+// END OF DB CONNECTION
 
+app.use(cors());
 app.use(express.json());
 app.use("/api/notes", noteRoute);
 
