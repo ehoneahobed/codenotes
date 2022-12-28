@@ -1,0 +1,48 @@
+.NoteDetails__title,
+.AddNote__form-title {
+  font-size: 30px;
+  font-weight: 600;
+  padding-bottom: 0.7rem;
+  border-bottom: 2px solid var(--color-gray);
+}
+
+.NoteDetails__content-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.NoteDetails__button {
+  display: flex;
+  gap: 1rem;
+  margin: 0.5rem 0;
+}
+
+.NoteDetails__button button {
+  padding: 0.8rem 2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.NoteDetails__button-edit {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+.NoteDetails__button-delete {
+  background-color: var(--color-danger);
+  color: var(--color-white);
+}
+
+.NoteDetails__content-timestamps {
+  font-size: 0.75rem;
+}
+
+.NoteDetails__content-timestamps span {
+  color: var(--color-accent);
+}
+
+.edit-detail {
+  color: var(--color-accent);
+}
