@@ -1,7 +1,8 @@
 import React from "react";
 import "./addnote.css";
 import { useRef, useEffect, useState } from "react";
-import axios from "axios"
+import axios from "axios";
+import URL from "../../App";
 
 function AddNote(props) {
   const [detail, setDetail] = useState();
@@ -24,7 +25,7 @@ function AddNote(props) {
       detail
     }
     try {
-      const res = await axios.post("/notes", newNote);
+      const res = await axios.post(`${URL}/notes`, newNote);
       window.location.replace("/note/"+ res.data._id);    
     } catch (error) {
       

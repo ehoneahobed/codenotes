@@ -6,7 +6,11 @@ import Notes from "./Components/notes/Notes";
 import AddNote from "./Components/addnote/AddNote";
 import NoteDetails from "./Components/notedetails/NoteDetails";
 
+
 import "./App.css";
+
+export const URL = process.env.REACT_APP_API_URL;
+// console.log(URL);
 
 function App() {
 	return (

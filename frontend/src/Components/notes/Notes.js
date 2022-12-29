@@ -4,6 +4,8 @@ import "./notes.css";
 import { useEffect, useState } from "react";
 import NoteCard from "./NoteCard";
 import { useLocation } from "react-router-dom";
+import { URL } from "../../App";
+
 
 function Notes() {
   const [notes, setNotes] = useState([]);
@@ -11,7 +13,7 @@ function Notes() {
 
   useEffect(() => {
     const fetchNotes = async () => {
-      const res = await axios.get("/notes" + search);
+      const res = await axios.get(`${URL}/notes` + search);
       // console.log(res.data);
       setNotes(res.data);
     };

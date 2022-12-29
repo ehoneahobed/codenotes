@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import "./notedetails.css";
 import { useLocation } from "react-router-dom";
 import axios from "axios"; 
+import URL from "../../App";
 
 function NoteDetails() {
   const location = useLocation();
@@ -14,7 +15,7 @@ function NoteDetails() {
 
   useEffect(() => {
     const fetchNote = async () => {
-      const res = await axios.get("/notes/"+ path);
+      const res = await axios.get(`${URL}/notes/`+ path);
       setNote(res.data);
       setTitle(res.data.title);
       setDetail(res.data.detail);
@@ -24,7 +25,7 @@ function NoteDetails() {
 
   const handleDelete = async () => {
     try {
-      await axios.delete("/notes/"+ path);
+      await axios.delete(`${URL}/notes/`+ path);
       window.location.replace("/");
     } catch (error) {
       console.log(error)
@@ -44,7 +45,7 @@ function NoteDetails() {
   
   const handleUpdate = async () => {
     try {
-      await axios.put(`/notes/${note._id}`, {
+      await axios.put(`${URL}/notes/${note._id}`, {
           title,
           detail,
           updatedAt: new Date(),
