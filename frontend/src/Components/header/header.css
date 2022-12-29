@@ -21,6 +21,10 @@
 
   .header__links {
 	margin-right: 10rem;
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	align-items: center;
   }
   
   .header__links ul{
@@ -28,3 +32,41 @@
 	gap: 1rem;
 	color: var(--color-white)
   }
+
+  /* hamburger menu */
+.uil-bars {
+	color: var(--color-white);
+	font-size: 2rem;
+	display: none;
+}
+
+@media screen and (max-width: 600px) {
+	.uil-bars {
+		display: block;
+	}
+
+	.header__links {
+		margin-right: 0;
+		/* display: block; */
+	}
+
+	.header__links ul {
+		position: absolute; /* position the menu absolutely so it is displayed above other content */
+		top: 4rem; /* align the top of the menu with the top of the viewport */
+		left: 0; /* align the left edge of the menu with the left edge of the viewport */
+		width: 50%; /* make the menu as wide as the viewport */
+		/* height: 100%; make the menu as tall as the viewport */
+		background-color: var(--color-primary); /* set the background color of the menu */
+		z-index: 1; /* set the z-index to ensure the menu is displayed above other content */
+		display: block; /*hide the menu by default */
+	  }
+	
+	.header__links-ul.open {
+		transform: translateY(-1000px);
+		background: transparent;
+	}
+
+	.header__links li {
+		margin: 2rem 2rem;
+	}
+}
